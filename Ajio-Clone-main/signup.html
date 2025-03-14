@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://assets.ajio.com/static/img/favicon.ico" type="image/icon type">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up</title>
+    
+</head>
+<body>
+    <!-- main box -->
+    <div id = "main">
+        <p class = "head">Welcome to AJIO</p>
+        <h5>Join/Sign In using</h5>
+
+        <!-- media box -->
+        <div id = "logobox">
+
+            <!-- fb box -->
+            <div class = "boxes" id = "fb">
+                <img src = "https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png"/>
+                <h4 id = "social">FACEBOOK</h4>
+            </div>
+
+            <div>
+                <!-- google box -->
+                <div class = "boxes" id = "google">
+                    <img src = "https://www.teambonding.com/wp-content/uploads/2018/07/google.jpg"/>
+                    <h4 id = "social">GOOGLE</h4>
+                </div>
+            </div> 
+        </div>
+
+        <div id = "line">
+            <div><hr></div>Or
+            <div><hr></div>
+        </div>
+         
+        <!-- Input Feilds -->
+        <div class="container">
+            <!-- <label>Enter Name</label><br> -->
+            <input class="input" id="name" type="text" placeholder="Enter Name"><br><br>
+
+            <!-- <label>Enter Email</label><br> -->
+            <input class="input" id="email" type="text" placeholder="Enter Email"><br><br>
+
+            <!-- <label>Enter Password</label><br> -->
+            <input class="input" id="password" type="password" placeholder="Enter Password"><br><br>
+
+            <!-- <label>Enter Mobile</label><br> -->
+            <input class="input" id="mobile" type="tel" placeholder="Enter Mobile"><br><br>
+            <span class="border"></span>
+           </div>
+
+           <!-- submit Button -->
+           <div id = "btn1">
+            <button  onclick="signUp()" id = "btn">CONTINUE</button>
+            <a onclick="LoginUp()"><button id = "btn">LOG-IN</button></a>
+           </div>
+           <!-- <button  onclick="signUp()" id = "btn">CONTINUE</button> -->
+
+           <!-- Terms & Cond. -->
+           <p class = "p">By Signing In, I agree to<span id = "color">Terms and Conditions.</span> </p>
+           <!-- <button id = "btn">LogIn</button> -->
+    </div>
+</body>
+</html>
+<script>
+// function signUp() {
+  
+//   var username = document.getElementById("name").value;
+//   var password = document.getElementById("password").value;
+  
+//   // Check if the username already exists in local storage
+//   if (localStorage.getItem(username)) {
+//     alert("Username already exists. Please choose another username.");
+//     return;
+//   }
+  
+//   // Store the username and password in local storage
+//   localStorage.setItem(username, password);
+  
+//   // Redirect the user to the login page
+//   window.location.href = "login.html";
+// }
+
+// // Login Functionality
+// function login() {
+//   // Retrieve input values
+//   var username = document.getElementById("username").value;
+//   var password = document.getElementById("password").value;
+  
+//   // Check if the username exists in local storage and if the password is correct
+//   if (localStorage.getItem(username) === password) {
+//     alert("Login successful!");
+//     // Redirect the user to the dashboard or homepage
+//     window.location.href = "dashboard.html";
+//   } else {
+//     alert("Incorrect username or password.");
+//   }
+// }
+
+// document.querySelector("form").addEventListener("submit", sign);
+  var objarr= JSON.parse(localStorage.getItem("account-data")) || [];
+  function signUp(){
+    // event.preventDefault();
+    var name=document.getElementById("name").value;
+    var email=document.getElementById("email").value;
+    var password=document.getElementById("password").value;
+
+    var obj={
+      name:name,
+      email:email,
+      pass:password,
+    };
+    objarr.push(obj);
+    localStorage.setItem("account-data", JSON.stringify(objarr));
+    alert("Signed up successful!")
+  }
+ 
+  function LoginUp(){
+    location.href="login.html";
+  }
+
+
+</script>

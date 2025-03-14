@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart _Page</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+     <link
+     rel="shortcut icon"
+     href="https://assets.ajio.com/static/img/favicon.ico"
+   />
+   <script src="https://kit.fontawesome.com/32979f5c51.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="nav-bar"><img src="Icons/ajioCart.png" alt=""></div>
+    
+    <br><br><br><br><br><br>
+    <hr>
+
+<div id="container">
+    <div id="header"><h3>My Bag <span id="total_items">(1 Items)</span></h3>
+    <a id="anchor1" href="wishlist.html">+ Add From Wishlist</a>    
+    </div>
+    <hr>
+    <div id="container1">
+    <div id="products">
+        
+    
+    </div>
+
+    <div id="order">
+        <div id="bill">
+            
+            <h4 id="od">Order Details </h4>
+            <br>
+            <p id="ord">Bag Total <span id="det1"></span></p> 
+            <br>
+            <p id="ord">Bag Discount <span id="det2"></span></p>
+            <br>
+            <!-- <p>Delivery <span id="det3"></span></p> -->
+            <h4 id="od">Order Total<span id="det4"></span></h4>
+            <br>
+          <button id='btn' onclick="myfun()">  PROCEED TO SHIPPING </button>
+          <hr id="hori">
+        </div>
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <br>
+            <input type="text" name="" id="couponCode" placeholder="Enter Coupon Code Here">
+           
+            <button>APPLY</button>  
+            <br>    
+            <h2>Applicable Coupon</h2>     
+            <br> 
+             <input id="coup" type="radio"> Saving: ₹ 1.00</button>
+             <br>
+             <h2>FREEDEL</h2>
+             <br>
+             <p id="couponP">Free Shipping For Limited Period.
+                View T & C</p>
+                <br>
+                <input type="text" name="" id="couponCode" placeholder="Enter Coupon Code Here">
+            <button>APPLY</button>      
+            <br>
+            <h2>Applicable Coupon</h2>    
+            <br>  
+             <input type="radio" id="coup"> Saving: ₹ 1.00</button>
+             <br> 
+             <h2>FREEDEL</h2>
+             <br> 
+             <p id="couponP" >Free Shipping For Limited Period.
+                View T & C</p>
+        </div>
+    </div>
+   
+</div>
+</div>
+<br><br><br><br><br>
+<div id="main-footer"></div>
+</body>
+<script src="cart.js"></script>
+<script src="navbar.js"></script>
+<script src="footer.js"></script>
+</html>

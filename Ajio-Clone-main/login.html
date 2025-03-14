@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://assets.ajio.com/static/img/favicon.ico" type="image/icon type">
+    <link rel="stylesheet" href="signup.css">
+    <title>LogIn</title>
+</head>
+<body>
+    
+ 
+ <div id = "main">
+
+    <p class = "head">Welcome to AJIO</p>
+    <h3 id = "in">Log-In</h3>
+
+    <div id = "logobox">
+
+        <!-- fb box -->
+        <div class = "boxes" id = "fb">
+            <img src = "https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png"/>
+            <h4>FACEBOOK</h4>
+        </div>
+
+        <div>
+            <!-- google box -->
+            <div class = "boxes" id = "google">
+                <img src = "https://www.teambonding.com/wp-content/uploads/2018/07/google.jpg"/>
+                <h4>GOOGLE</h4>
+            </div>
+        </div> 
+    </div>
+
+    <div id = "line">
+        <hr>or<hr>
+    </div>
+     
+    <!-- Input Feilds -->
+    <div class="container">
+        <input class="input" id="email" type="text" placeholder= "Enter email" ><br><br>
+        <input class="input" id="password" type="password" placeholder="Enter Password" ><br><br>
+
+        <span class="border"></span>
+       </div>
+
+       <button  onclick="logIn()" id = "btn">CONTINUE</button>
+
+       <p class = "p">Go back to the <span id = "color"><a href="signup.html">Sign Page.</a></span> </p>
+</div>
+
+
+</body>
+</html>
+<script>
+    var storearr = JSON.parse(localStorage.getItem("account-data"))||[];
+ function logIn(){
+    var email = document.getElementById("email").value;
+  var password =document.getElementById("password").value;
+  
+  storearr.map(function (ele){
+    if(ele.email === email && ele.pass === password){
+    
+     alert("Sign in Successful");
+        location.href="index.html";
+    }
+    else{
+        alert("Wrong Credentials");
+
+    }
+    console.log(ele.email,email, password, ele.pass,ele);
+    return ele;
+   
+  });
+
+ }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    
+ -->
